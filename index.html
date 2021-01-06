@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Web Development 網站架構 &amp; 設計</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="web-development-網站架構-&-設計"><a class="header-link" href="#web-development-網站架構-&-設計"></a>Web Development 網站架構 &amp; 設計</h1>
+<h2 id="html"><a class="header-link" href="#html"></a>HTML</h2>
+<h3 id="整體結構-:"><a class="header-link" href="#整體結構-:"></a>整體結構 :</h3>
+<pre class="hljs"><code><span class="hljs-meta">&lt;!doctypehtml&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>網站的名稱<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    所有內文
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre><h3 id="常用的tags-:"><a class="header-link" href="#常用的tags-:"></a>常用的tags :</h3>
+<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>     paragraph 段落
+<span class="hljs-tag">&lt;<span class="hljs-name">h</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">h</span>&gt;</span>     heading 標題
+<span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>   italic 斜體
+<span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>     bold 粗體
+<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>           line break 換行
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>   unorder list 無排序清單
+<span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>   order list 排序清單
+註 : <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>和<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>不一樣，前者上下個空一行，後者只有換行 </code></pre><h3 id="常用語法"><a class="header-link" href="#常用語法"></a>常用語法</h3>
+<ul class="list">
+<li>How do we add links ?</li>
+</ul>
+<p>Use my video online learning as an example :</p>
+<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.youtube.com/watch?v=3JluqTojuME"</span>&gt;</span>online learning<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre><ul class="list">
+<li>How do we add images ?</li>
+</ul>
+<p>For example :</p>
+<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">img</span>&gt;</span></code></pre><ul class="list">
+<li>How to make an unorder list ?</li>
+</ul>
+<p>For example :</p>
+<pre class="hljs"><code><span class="hljs-symbol">&lt;ul&gt;</span>
+    <span class="hljs-symbol">&lt;li&gt;</span>item1&lt;/li&gt;
+    <span class="hljs-symbol">&lt;li&gt;</span>item2&lt;/li&gt;
+&lt;/ul&gt;
+
+By the way, <span class="hljs-keyword">if</span> we want <span class="hljs-keyword">a</span> order <span class="hljs-keyword">list</span>, just <span class="hljs-keyword">change</span> the <span class="hljs-symbol">&lt;ul&gt;</span> <span class="hljs-keyword">tags</span> <span class="hljs-keyword">to</span> <span class="hljs-symbol">&lt;ol&gt;</span> instead.</code></pre><h2 id="css"><a class="header-link" href="#css"></a>CSS</h2>
+<h3 id="整體結構-:-1"><a class="header-link" href="#整體結構-:-1"></a>整體結構 :</h3>
+<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span><span class="css">
+    <span class="hljs-selector-tag">body</span>{
+
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></code></pre><h3 id="引用css"><a class="header-link" href="#引用css"></a>引用CSS</h3>
+<pre class="hljs"><code>  <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"styles/main.css rel="</span><span class="hljs-attr">stylesheet</span>" <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span><span class="undefined">
+     }</span></code></pre><h3 id="顏色的幾種寫法"><a class="header-link" href="#顏色的幾種寫法"></a>顏色的幾種寫法</h3>
+<ol class="list">
+<li><p>直接寫顏色</p>
+<p> ex. tomato</p>
+</li>
+<li><p>色號</p>
+<p> ex. #333</p>
+</li>
+<li><p>RGB</p>
+<p> ex. rgb(255, 12, 0) </p>
+</li>
+<li><p>HEX</p>
+<p> ex. #ff6845 </p>
+</li>
+<li><p>HSL</p>
+<p> ex. hsl(9, 30%, 74%)</p>
+</li>
+<li><p>rgba</p>
+<p> ex. rgba(235, 39, 54, 0.5)</p>
+</li>
+<li><p>hsla</p>
+<p> ex. hsla(5, 45%, 39%, 0.5)</p>
+</li>
+</ol>
+<h3 id="字元網底"><a class="header-link" href="#字元網底"></a>字元網底</h3>
+<p>background-color: #999;
+(ex.#999灰色 #555淺灰 #000黑色)</p>
+<h3 id="字的顏色"><a class="header-link" href="#字的顏色"></a>字的顏色</h3>
+<p>color: white;      </p>
+<h3 id="邊框"><a class="header-link" href="#邊框"></a>邊框</h3>
+<p>border: 2px solid Violet;</p>
+<h3 id="字體"><a class="header-link" href="#字體"></a>字體</h3>
+<p>font-family: arial;</p>
+<h3 id="水平對齊"><a class="header-link" href="#水平對齊"></a>水平對齊</h3>
+<p>text-align: center;</p>
+<h3 id="內距設定(長/寬)"><a class="header-link" href="#內距設定(長/寬)"></a>內距設定(長/寬)</h3>
+<p>padding: 10px 10px 1px 1px;</p>
+<h3 id="背景"><a class="header-link" href="#背景"></a>背景</h3>
+<ul class="list">
+<li>opacity : 用於背景顏色透明程度(由 0.0 到 1.0)</li>
+<li><p>background-image : 放背景圖片</p>
+<p>  語法 : url(圖片地址)</p>
+</li>
+<li><p>background-repeat: repeat-x 重複展示照片</p>
+<p>  (x代表水平，y代表垂直)</p>
+</li>
+<li><p>background-repeat: no-repeat 照片只出現一次</p>
+</li>
+</ul>
+<h3 id="selectors"><a class="header-link" href="#selectors"></a>Selectors</h3>
+<pre class="hljs"><code>. 代表 <span class="hljs-class"><span class="hljs-keyword">class</span></span>
+# 代表 id 
+註 :
+<span class="hljs-number">1.</span>id和<span class="hljs-class"><span class="hljs-keyword">class</span><span class="hljs-title">的差別在於id一個網頁只能有一個，class則無限制</span> <span class="hljs-title">!</span></span>
+<span class="hljs-number">2.</span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">and</span> <span class="hljs-title">id</span> <span class="hljs-title">name</span> <span class="hljs-title">cannot</span> <span class="hljs-title">start</span> <span class="hljs-keyword">with</span> <span class="hljs-title">a</span> <span class="hljs-title">number</span></span>
+* 代表全部元素</code></pre><h3 id="註解"><a class="header-link" href="#註解"></a>註解</h3>
+<pre class="hljs"><code>CSS :
+<span class="hljs-comment">/* 一段文字 */</span>
+HTML :
+<span class="xml"><span class="hljs-comment">&lt;!-- 一段文字 --&gt;</span></span></code></pre>    </article>
+  </body>
+</html>
